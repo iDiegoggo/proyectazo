@@ -1,0 +1,847 @@
+/* Estilos de carga */
+body.carga {
+    font-family: 'Arial', sans-serif;
+    background-color: #292935;
+}
+
+.contenedor-carga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contenedor-carga img {
+    width: 60%;
+}
+
+.titulo-carga {
+    margin-top: 20px;
+    font-size: 36px;
+    color: #f7eded;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Estilos generales del cuerpo */
+.subpage1 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('Ahsoka\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos del encabezado */
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #111;
+}
+
+.encabezado h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 120px;
+}
+.logo-y-texto {
+    display: flex;
+    align-items: center;
+}
+.logo-y-texto h2 {
+    margin-left: 20px;
+    color: #fff;
+}
+
+/* Estilos del nav */
+.navegacion {
+    display: flex;
+}
+
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out; /* Agregamos la transición */
+}
+
+/* Efecto al pasar el ratón por encima */
+.navegacion a:hover {
+    background-color: #333; /* Cambiamos el color de fondo al pasar el ratón */
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 20px; /* Agrega un margen a la izquierda */
+}
+
+/* Estilos de la sección principal */
+.seccion {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+
+/* Estilos del contenedor del texto */
+.contenedor-texto {
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    margin-bottom: 20px; /* Mismo margen que el aside */
+    
+   
+}
+
+/* Estilos del texto principal */
+.contenedor-texto p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: 26px; /* Doble de tamaño que el tamaño original */
+}
+
+/* Estilos del aside lateral */
+.lateral {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+    width: 30%;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.lateral h3 {
+    border-bottom: 1px solid #fff;
+}
+
+.lateral .noticia {
+    margin-bottom: 20px;
+}
+
+.lateral .noticia img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    transition: opacity 0.5s ease;
+}
+.imagen-noticia:hover {
+    opacity: 0.2;  /* Cambiar la opacidad al pasar el ratón por encima */
+}
+
+.lateral p {
+    font-size: 16px; /* Puedes ajustar el tamaño del texto según sea necesario */
+}
+
+/* Estilos del pie de página */
+.pie-de-pagina {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+}
+
+/* Estilos de los enlaces sociales */
+.enlaces-sociales {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.enlaces-sociales li {
+    margin: 0 10px;
+}
+
+.enlaces-sociales a {
+    color: #fff;
+    text-decoration: none;
+}
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.imagen-carrusel {
+    flex: 0 0 100%;
+    animation: cambioImagen 12s infinite;
+    width: 100%; /* Forzar el ancho al 100% */
+}
+
+.imagen-carrusel img {
+    width: 100%;
+    height: 100%; /* Forzar la altura al 100% */
+    object-fit: cover; /* Ajustar la imagen sin perder la proporción y cubrir completamente */
+    border-radius: 8px;
+}
+
+@keyframes cambioImagen {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(0%);
+    }
+}
+
+/* Media Query para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    .contenedor-principal {
+        max-width: 100%;
+    }
+
+    .seccion, .lateral {
+        width: 100%;
+        margin: 0;
+    }
+  .contenedor-principal {
+      display: flex;
+      flex-direction: column; /* Cambia a una columna en lugar de una fila en pantallas más pequeñas */
+      max-width: 90%; /* Reducir el ancho máximo para aumentar el espacio en pantallas más pequeñas */
+      margin: 0 auto;
+  }
+  .navegacion {
+      padding: 10px; /* Agrega un relleno para mejorar la apariencia en pantallas pequeñas */
+      text-align: center; /* Centra el texto en pantallas pequeñas */
+      /* Agrega cualquier otro estilo necesario para mejorar la visualización en pantallas pequeñas */
+  }
+
+  /* Estilos de la sección principal */
+  .seccion {
+      padding: 10px; /* Reducir el relleno para aumentar el espacio en pantallas más pequeñas */
+      text-align: center;
+  }
+
+  .encabezado h2 {
+      text-align: center;
+      font-size: 20px;
+      color: #fff;
+      margin: 20px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilos del aside lateral */
+  .lateral {
+      background-color: #222;
+      color: #fff;
+      padding: 10px; /* Reducir el relleno para aumentar el espacio en pantallas más pequeñas */
+      margin: 10px; /* Reducir el margen para aumentar el espacio en pantallas más pequeñas */
+      font-size: 16px; /* Reducir el tamaño de la fuente para pantallas más pequeñas */
+      width: 100%; /* Cambia el ancho a 100% para ocupar todo el ancho en pantallas más pequeñas */
+      flex-shrink: 0;
+      margin-bottom: 10px; /* Reducir el margen inferior para aumentar el espacio en pantallas más pequeñas */
+  }
+}
+
+
+
+/* peli */
+
+
+/* Estilo para el cuerpo de la página */
+
+
+/* Resto de tus estilos */
+.cuerpopeli {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    background-image: url('negro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+
+/* Estilos para la cabecera */
+.cabecera-peli {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo-peli {
+    margin: 0;
+    font-size: 4em;
+}
+
+.subtitulo-peli {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+/* Estilos para la navegación */
+.navegacion-peli {
+    background-color: #444;
+    padding: 10px;
+}
+
+.menu-peli {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-peli a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #666;
+}
+
+.menu-peli a img {
+    width: auto;
+    height: 30px;
+}
+
+.menu-peli a:hover {
+    background-color: #888;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para el contenido principal */
+.contenido-peli {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para la tabla */
+.tablapeli {
+    width: 100%;
+    
+    margin-top: 20px;
+}
+
+.tablapeli th, .tablapeli td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+.tablapeli th {
+    background-color: #333;
+    color: white;
+}
+
+/* Estilos para la imagen de los carteles */
+.carteles-peli {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    
+}
+
+/* Estilos para la sección de curiosidades */
+.seccion-curiosidades {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilos para la lista de curiosidades */
+.lista-curiosidades {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-curiosidades li {
+    margin-bottom: 10px;
+}
+
+
+/* Estilos para el pie de página general */
+.pie-pagina {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el pie de página personalizado */
+.pie-de-pagina {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Estilos para los enlaces sociales del pie de página */
+.enlaces-sociales {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.enlaces-sociales li {
+    margin: 0 10px;
+}
+
+.enlaces-sociales a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para la sección de contenido */
+.seccion-contenido {
+    margin: 20px 0;
+}
+
+/* Estilos para el párrafo de descripción */
+.seccion-contenido p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* Estilos para el contenedor de imágenes con clases actualizadas */
+.seccion-contenido .contenedor-imagenes-peli {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Estilos para cada imagen dentro del carrusel */
+.seccion-contenido .contenedor-imagenes-peli img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Agrega animación para mostrar las imágenes automáticamente */
+.seccion-contenido .contenedor-imagenes-peli img {
+    animation: slide 18s infinite linear;
+}
+
+/* Definir la animación slide */
+@keyframes slide {
+    0%, 100% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    16.66%, 33.33% {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+    33.33%, 50% {
+        opacity: 1;
+        transform: translateX(-200%);
+    }
+    50%, 66.66% {
+        opacity: 1;
+        transform: translateX(-300%);
+    }
+    66.66%, 83.33% {
+        opacity: 1;
+        transform: translateX(-400%);
+    }
+    83.33%, 100% {
+        opacity: 1;
+        transform: translateX(-500%);
+    }
+}
+
+/* Media query para hacer la página responsive */
+@media only screen and (max-width: 600px) {
+    .titulo-peli {
+        font-size: 2.5em;
+    }
+
+    .subtitulo-peli {
+        font-size: 1em;
+    }
+}
+
+.cuerposeries {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo3\ \(1\).jpeg'); 
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    color: #fff; /* Color de texto para asegurarse de que sea legible en la imagen de fondo */
+}
+    
+
+
+
+/*otros */
+
+
+/* Estilos generales */
+body.otro-cuerpo {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.otra-seccion-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Carrusel de curiosidades */
+.carrusel-curiosidades {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.bloque-curiosidades {
+    scroll-snap-align: start;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+
+.bloque-curiosidades:hover {
+    transform: scale(1.05); /* Efecto de escala en el hover */
+}
+
+.lista-curiosidades {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-curiosidades li {
+    margin-bottom: 10px;
+}
+
+/* Estilos del título de curiosidades */
+.seccion-titulo {
+    font-size: 2em;
+    color: #ffcc00; /* Cambia el color del título */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sección de Funny Moments */
+.funny-moments {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Pie de página */
+.otro-pie-de-pagina {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Enlaces sociales en el pie de página */
+.otros-enlaces-sociales {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.otros-enlaces-sociales li {
+    margin: 0 10px;
+}
+
+.otros-enlaces-sociales a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición en el color al hover */
+}
+
+.otros-enlaces-sociales a:hover {
+    color: #f00; /* Cambia el color al hover */
+}
+
+/* Reglas de medios para hacerlo responsive */
+@media screen and (max-width: 768px) {
+    .carrusel-curiosidades {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloque-curiosidades {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade margen inferior en bloques de curiosidades para dispositivos móviles */
+    }
+
+    .seccion-titulo {
+        font-size: 1.5em; /* Reduce el tamaño del título en pantallas más pequeñas si es necesario */
+        margin-bottom: 10px; /* Añade margen inferior al título para dispositivos móviles */
+    }
+
+    .lista-curiosidades li {
+        font-size: 14px; /* Ajusta el tamaño del texto de la lista para pantallas más pequeñas si es necesario */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .seccion-titulo {
+        font-size: 1.2em; /* Reduce aún más el tamaño del título para pantallas muy pequeñas si es necesario */
+        margin-bottom: 8px; /* Añade margen inferior adicional al título para dispositivos móviles más pequeños */
+    }
+
+    .lista-curiosidades li {
+        font-size: 12px; /* Ajusta aún más el tamaño del texto de la lista para pantallas muy pequeñas si es necesario */
+    }
+}
+
+/*2carga*/
+
+.subpage3 {
+    font-family: 'Roboto', sans-serif;
+    background-color: #444444;
+}
+
+.contenedor-botones {
+    text-align: center;
+    margin: 20px auto;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.gif {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.gif-carga {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Estilos para hacer la página responsive */
+@media screen and (max-width: 768px) {
+    button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .gif-carga {
+        max-width: 80%;
+    }
+}
+
+
+
+
+
+
+
+/*formulario*/
+
+
+/* Estilos generales del formulario */
+.cuerpo-formulario {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.cabecera-formulario, .navegacion-formulario, .contenido-formulario {
+    padding: 40px;
+}
+
+.cabecera-formulario {
+    background-color: #222;
+    text-align: center;
+}
+
+.navegacion-formulario {
+    margin-top: 40px;
+}
+
+.navegacion-formulario a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    margin-right: 40px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.navegacion-formulario a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.contenido-formulario {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+form {
+    background-color: #444;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+label {
+    display: block;
+}
+
+
+@media only screen and (min-width: 801px) {
+    .formulario-titulo {
+        font-size: 5em;
+    }
+
+    .formulario-explicacion {
+        font-size: 2.2em;
+    }
+
+    .formulario-menu a {
+        font-size: 2em;
+        padding: 20px;
+    }
+}
+
+
+/*galeria*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo {
+    margin: 0;
+}
+
+.navegacion-peli {
+    /* Puedes agregar estilos específicos para el nav si es necesario */
+}
+
+.contenedor-imagenes {
+    text-align: center; /* Centrar las imágenes horizontalmente */
+    display: flex;      /* Utilizar el modelo de caja flexible (flexbox) */
+    flex-direction: column; /* Colocar las imágenes en una columna vertical */
+    align-items: center; /* Centrar las imágenes horizontalmente en el contenedor */
+    max-width: 1200px;  /* Establecer un ancho máximo para el contenedor */
+    margin: 0 auto;     /* Centrar el contenedor en la página */
+}
+
+.imagen {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 300%; /* Hacer las imágenes un 300% más grandes */
+    max-width: 100%; /* Garantizar que las imágenes no se desborden del contenedor */
+    align-self: center; /* Centrar verticalmente las imágenes */
+}
+
+.imagen:hover {
+    transform: scale(1.05);
+}
+
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.enlaces-sociales {
+    list-style: none;
+    padding: 0;
+}
+
+.enlaces-sociales li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.enlaces-sociales a {
+    color: white;
+    text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+    /* Estilos para tablets y dispositivos similares */
+    .imagen {
+        width: 48%; /* Establecer el ancho de las imágenes */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Estilos para pantallas más grandes (por ejemplo, escritorios) */
+    .imagen {
+        width: 60%; /* Establecer el ancho de las imágenes */
+    }
+}
+
+

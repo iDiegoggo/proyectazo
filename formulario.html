@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="language" content="Spanish">
+    <meta name="author" content="Diego García Albero">
+    <meta name="keywords" content="Formulario, preguntas y opinion">
+    <meta name="description" content="Web con formulario para ayudar a la web">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="es">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="b4b5fdf7bf06601ad4bd1cc6f73acff3.png" type="image/png">
+  </head>
+
+<body class="otro-cuerpo">
+
+    <header class="cabecera-peli">
+        <h1 class="titulo-peli">STAR WARS</h1>
+        <h2 class="subtitulo-peli">Diego García Albero</h2>
+        <hr>
+    </header>
+
+    <nav class="navegacion-peli">
+        <ul class="menu-peli">
+            <li><a href="index.html"><img src="2088906.png" alt="index.html"></a></li>
+        </ul>
+    </nav>
+
+    <main class="otra-seccion-contenido">
+      <p class="formulario-descripcion">
+        Bienvenido al formulario de Star Wars Fan Page. Completa las siguientes preguntas para compartir tu amor por Star Wars con nosotros.
+      </p>
+
+        <form action="procesar_formulario.php" method="post">
+
+            <label for="nombre">1. ¿Cuál es tu nombre?</label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required>
+
+            <label>2. ¿Cuál/es de estos personajes es tu favorito?</label>
+            
+            <label for="luke">Luke Skywalker</label>
+            <input type="checkbox" id="luke" name="personaje" value="luke">
+            <label for="leia">Princesa Leia</label>
+            <input type="checkbox" id="leia" name="personaje" value="leia">
+            <label for="yoda">Yoda</label>
+            <input type="checkbox" id="yoda" name="personaje" value="yoda">
+          
+            <label>3. ¿Cuál es tu afiliación?</label>
+            <label for="rebelde">Alianza Rebelde</label>
+            <input type="radio" id="rebelde" name="afiliacion" value="rebelde">
+            <label for="imperio">Imperio Galáctico</label>
+            <input type="radio" id="imperio" name="afiliacion" value="imperio">
+
+            <label for="edad">4. ¿Cuántos años tienes?</label>
+            <input type="number" id="edad" name="edad" min="1" required>
+
+            <label for="planeta">5. ¿De qué planeta eres?</label>
+            <select id="planeta" name="planeta" required>
+                <option value="tatooine">Tatooine</option>
+                <option value="alderaan">Alderaan</option>
+                <option value="coruscant">Coruscant</option>
+            </select>
+
+            <label for="respuesta">6. ¿Quién es el villano más icónico de Star Wars?</label>
+            <input type="text" id="respuesta" name="respuesta" pattern="[a-zA-Z0-9\s]+" required>
+            
+
+            <label>7. ¿Qué tipo de sable de luz prefieres?</label>
+            <label for="simple">Simple</label>
+            <input type="radio" id="simple" name="sable" value="simple">
+            
+            <label for="doble">Doble</label>
+            <input type="radio" id="doble" name="sable" value="doble">
+
+            <label for="duales">duales</label>
+            <input type="radio" id="duales" name="sable" value="duales">
+            
+
+            <label for="numero_peliculas">8. ¿Cuántas películas de Star Wars has visto?</label>
+            <input type="number" id="numero_peliculas" name="numero_peliculas" min="0" required>
+
+            <label for="color_lightsaber">9. ¿De qué color te gustaría que fuera tu sable de luz?</label>
+            <input type="color" id="color_lightsaber" name="color_lightsaber" value="#ff0000">
+
+            <label for="opinion">10. Deja tu opinión sobre Star Wars:</label>
+            <textarea id="opinion" name="opinion" rows="4" cols="50"></textarea>
+
+          <label for="barra_movil">11. ¿En qué posición ubicarías la saga de Star Wars en una barra móvil?</label>
+          <input type="range" id="barra_movil" name="barra_movil" min="0" max="100" step="1" value="50">
+
+          
+          <label for="fecha_hoy">12. ¿Cuál es la fecha de hoy?</label>
+          <input type="date" id="fecha_hoy" name="fecha_hoy" required>
+
+            <div class="botones">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+
+        </form>
+
+    </main>
+
+  <footer class="pie-de-pagina">
+      <p>&copy; 2023 Star Wars Fan Page. Todos los derechos reservados.</p>
+      <p>Contacto: <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a></p>
+      <ul class="enlaces-sociales">
+          <li><a href="https://www.facebook.com/StarWars/" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com/starwars" target="_blank">Twitter</a></li>
+          <li><a href="https://www.instagram.com/starwars/" target="_blank">Instagram</a></li>
+      </ul>
+  </footer>
+</body>
+
+</html>
